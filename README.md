@@ -1,8 +1,8 @@
-# GDPR Module
+# Cookie Level for GDPR Module
 
-I made this module for Digimood, a webmarketing agency.
+This module makes your life easier to be GDPR compliant about the Cookie Privacy Policy.
 
-This module make your life easier to be GDPR compliant about the Cookie Privacy Policy.
+This webusers will be able to choice between three consent levels : technical cookies, analytics cookies, marketing cookies.
 
 ## Getting Started
 
