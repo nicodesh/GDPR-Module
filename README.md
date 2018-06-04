@@ -1,4 +1,4 @@
-# Cookie Level for GDPR Module
+# Cookie Level Consent Manager
 
 This module makes your life easier to be GDPR compliant about the Cookie Privacy Policy.
 
