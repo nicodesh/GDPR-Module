@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Page d'exemple d'implémentation du module RGPD.</title>
+
+        <!-- UTF8 Encoding is mandatory -->
+        <meta charset="utf-8" />
+
+        <!-- In the header, you have to call the module CSS file -->
+        <link rel="stylesheet" type="text/css" href="cookieLevel.css">
+    </head>
+    <body style="width:100%;height:2000px;background-color:#446CB3;">
+        <h1 style="padding-top:2em;text-align:center;font-family:Arial, sans-serif; color:white;font-size:48px;font-weight: normal;">Page de démo du module Cookie Level.</h1>
+
+        <!-- HTML Elements - Made up of three <div> tags -->
+
+        <!-- Div #1 -->
+        <div id="popinrgpd" src="" id="popinrgpd">
+            <div id="popinrgpdtitle"></div>
+            <p id="popinrgpdfirstp"></p>
+            <p id="popinrgpdsecondp"></p>
+            <hr>
+            <div id="bgwrapper">
+                <div id="level3" class="level">
+                    <div id="level3h2" class="headerlevel"></div>
+                    <div class="corelevel">
+                        <ul>
+                            <li id="levelthreefirstli"></li>
+                            <li id="levelthreesecondli"></li>
+                            <li id="levelthreethirdli"></li>
+                        </ul>
+                        <div onclick="setCookieLevel('level3');closeCookieLevelPopIn();" class="choisirlevel"></div>
+                    </div>
+                </div>
+                <div id="level2" class="level">
+                    <div id="level2h2" class="headerlevel"></div>
+                    <div class="corelevel">
+                        <ul>
+                            <li id="leveltwofirstli"></li>
+                            <li id="leveltwosecondli"></li>
+                            <li id="leveltwothirdli"></li>
+                        </ul>   
+                        <div onclick="setCookieLevel('level2');closeCookieLevelPopIn();" class="choisirlevel"></div>
+                    </div>
+                </div>
+                <div id="level1" class="level">
+                    <div id="level1h2" class="headerlevel"></div>
+                    <div class="corelevel">
+                        <ul>
+                            <li id="levelonefirstli"></li>
+                            <li id="levelonesecondli"></li>
+                            <li id="levelonethirdli"></li>
+                        </ul>
+                        <div onclick="setCookieLevel('level1');closeCookieLevelPopIn();" class="choisirlevel">Ou</div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <!-- Div #2 -->
+        <div onclick="closeCookieLevelPopIn();" id="greybg"></div>
+
+        <!-- Div #3 -->
+        <div id="bandeaurgpd">
+            <p>Ce site web utilise des cookies afin d'optimiser l'expérience utilisateur. En naviguant sur le site, vous acceptez l'usage de ces cookies.</p>
+            <div onclick="closeCookieLevelBand()" class="boutonrgpd">Accepter</div>
+            <div onclick="closeCookieLevelBand();openCookieLevelPopIn()" class="lienrgpd">En savoir plus</div>
+            <div onclick="closeCookieLevelBand()" id="croixrgpd" class="boutonrgpd">X</div>
+        </div>  
+
+        <!-- Insert the Module Javascript file juste before the </body> tag -->
+        <script type="text/javascript" src="cookieLevel.js"></script>
+    </body>
+</html>
+
