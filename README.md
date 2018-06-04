@@ -8,11 +8,11 @@ This webusers will be able to choice between three consent levels : technical co
 
 You just have a index.html, which is an (almost) empty exemple of a web page.
 
-Inside, you can find the HTML bloc, compound of 3 <div>.
+Inside, you can find the HTML bloc, compound of 3 div tags.
 
 Then, you have a CSS file that you have to call on each web page.
 
-And finally, the JavaScript code that you have to call before the </body> tag.
+And finally, the JavaScript code that you have to call before the closing body tag.
 
 ### Prerequisites
 
@@ -34,9 +34,38 @@ There are three consent levels.
 2. Technical cookies + Analytics cookies
 3. Technical cookies + Analytics cookies + Marketing cookies
 
-The module is in french, so you have to adapt the text content.
+The module is in french, so you have to adapt the text content of :
 
-All text contents are push in JavaScript, in order to be SEO friendly.
+1. The main text in the pop-in
+2. Each text of each consent level
+3. The band content
+
+All pop-in text contents are push in JavaScript, in order to be SEO friendly.
+
+You can check the JavaScript file to change the name of the cookie.
+
+## Testings
+
+If everything is okay, a cookie is set with one of those three different values:
+
+'level1' or 'level2' or 'level3'.
+
+And then, the module will send one or several "dataLayer.push({})" for each page loading.
+
+Cookie value: 'level1'
+Actions:
+dataLayer.push({'event': 'level1'});
+
+Cookie value: 'level2'
+Actions:
+dataLayer.push({'event': 'level1'});
+dataLayer.push({'event': 'level2'});
+
+Cookie value: 'level3'
+Actions:
+dataLayer.push({'event': 'level1'});
+dataLayer.push({'event': 'level2'});
+dataLayer.push({'event': 'level3'});
 
 ## Author
 
