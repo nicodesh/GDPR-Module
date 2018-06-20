@@ -41,24 +41,22 @@ function getCookie(cookieName) {
 // Return a human readeable level value
 function getCookieLevel(cookieValue) {
 
-    if (cookieLevelValues.includes(cookieValue)) {
-
-        if (cookieValue === 'level1') {
-            return 'Minimal';
-        }
-
-        else if (cookieValue === 'level2') {
-            return 'Intermédiaire';
-        }
-
-        else if (cookieValue === 'level3') {
-            return 'Optimal';
-        }
-
-        else {
-            return 'Inconnu';
-        }
+    if (cookieValue === 'level1') {
+        return 'Minimal';
     }
+
+    else if (cookieValue === 'level2') {
+        return 'Intermédiaire';
+    }
+
+    else if (cookieValue === 'level3') {
+        return 'Optimal';
+    }
+
+    else {
+        return 'Inconnu';
+    }
+
 }
 
 // Open the Cookie Level Band
@@ -101,8 +99,10 @@ function openCookieLevelPopIn() {
     // Highligth the actual level value
     var theLevel = getCookie(cookieName);
 
-    if (cookieLevelValues.includes(theLevel)) {
+    if (document.getElementById(theLevel) !== null) {
+
         document.getElementById(theLevel).style.boxShadow = '0px 0px 9px 0px rgba(153,153,153,1)';
+    
     }
 
     // Push the text in the different nodes (prevent SEO side effects)
